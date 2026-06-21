@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products & Services — Art of Wood | Mira Bhayandar</title>
+  <meta name="description" content="Custom sofas, wardrobes, modular kitchens, beds, TV units, false ceiling & more. Premium furniture in Mira Bhayandar, Mumbai."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .products-sec { background: var(--chalk); }
+    .products-sec .wrap { padding-top: 52px; padding-bottom: 80px; }
+    /* hide filtered out cards */
+    .card[data-cat] { transition: opacity .35s, transform .35s; }
+    .card.hidden { display: none; }
+    /* count badge */
+    .count-tag {
+      font-size: 13px;
+      color: var(--text-soft);
+      font-weight: 400;
+      margin-left: 12px;
+      font-family: var(--body);
+    }
+    .cards-grid.four {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media(max-width: 1100px) { .cards-grid.four { grid-template-columns: repeat(3,1fr); } }
+    @media(max-width: 760px)  { .cards-grid.four { grid-template-columns: repeat(1,1fr); } }
+    @media(max-width: 540px)  { .cards-grid.four { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY HEADER / NAV
+============================================================ -->
+<header id="header">
+  <div class="wrap">
+    <nav class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="txt">
+          <span class="name">Art of Wood</span>
+          <span class="tag">Furniture & Interiors</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="btn btn-brass btn-sm">Get a Free Quote</a>
+      <button class="hamburger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<nav class="drawer" id="drawer">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-brass">Get a Free Quote</a>
+</nav>
+
+<!-- ============================================================
+     PAGE HERO
+============================================================ -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow light">Everything We Make</div>
+    <h1>Products &<br/>Services</h1>
+    <p>16 categories of custom furniture & interior solutions — built for real Indian homes.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS GRID WITH FILTER
+============================================================ -->
+<section class="products-sec">
+  <div class="wrap">
+    <!-- Filter bar -->
+    <div class="filter-bar" id="filterBar">
+      <button class="active" data-filter="all">All <span class="count-tag" id="countAll"></span></button>
+      <button data-filter="living">Living Room</button>
+      <button data-filter="bedroom">Bedroom</button>
+      <button data-filter="kitchen">Kitchen</button>
+      <button data-filter="office">Office</button>
+      <button data-filter="storage">Storage</button>
+      <button data-filter="interior">Interiors</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards-grid four" id="productsGrid">
+
+      <!-- 1 · Sofas -->
+      <div class="card reveal" data-cat="living">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="Custom Sofa"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Living Room</div>
+          <h3>Custom Sofas</h3>
+          <p>3-seater, L-shape, sectional — fabric or leatherette, any dimension. Foam density chosen to your preference.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 2 · TV Unit -->
+      <div class="card reveal" data-delay="60" data-cat="living">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=80" alt="TV Unit"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Living Room</div>
+          <h3>TV Units & Media Panels</h3>
+          <p>Floor-to-ceiling media walls, floating TV units with LED backlight, concealed wire management and ample storage.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 3 · Center Table -->
+      <div class="card reveal" data-delay="120" data-cat="living">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&w=900&q=80" alt="Coffee Table"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Living Room</div>
+          <h3>Center & Coffee Tables</h3>
+          <p>Solid wood tops, glass inserts, nested designs — center tables that anchor your living room beautifully.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 4 · Dining Table -->
+      <div class="card reveal" data-delay="0" data-cat="living">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80" alt="Dining Table"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Dining</div>
+          <h3>Dining Tables</h3>
+          <p>4-seater to 8-seater. Solid sheesham wood, engineered wood, or glass top — with matching chairs available.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 5 · Wardrobe Sliding -->
+      <div class="card reveal" data-delay="0" data-cat="bedroom">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Sliding Wardrobe"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Bedroom</div>
+          <h3>Sliding Wardrobes</h3>
+          <p>Space-efficient sliding door wardrobes with mirror panels, concealed LED strips & modular internal organizers.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 6 · Wardrobe Openable -->
+      <div class="card reveal" data-delay="60" data-cat="bedroom">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=900&q=80" alt="Wardrobe"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Bedroom</div>
+          <h3>Openable Wardrobes</h3>
+          <p>Classic hinged-door wardrobes with adjustable shelves, hanging rods, and deep drawers — fully customizable.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 7 · Bed -->
+      <div class="card reveal" data-delay="120" data-cat="bedroom">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Bed"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Bedroom</div>
+          <h3>Custom Beds</h3>
+          <p>King, Queen or single — box beds with hydraulic storage, designer headboards, side tables to match.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 8 · Study Table -->
+      <div class="card reveal" data-delay="180" data-cat="bedroom">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=900&q=80" alt="Study Table"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Bedroom / Study</div>
+          <h3>Study Tables</h3>
+          <p>Kids' corner desks to adult work-from-home setups. Bookshelf attachment, cable trays, and ergonomic heights.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 9 · Modular Kitchen -->
+      <div class="card reveal" data-delay="0" data-cat="kitchen">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Modular Kitchen"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Kitchen</div>
+          <h3>Modular Kitchens</h3>
+          <p>Designed for Indian cooking. L-shape, U-shape, parallel — with Hettich fittings, heat-resistant laminates, and chimney provision.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 10 · Office Furniture -->
+      <div class="card reveal" data-delay="0" data-cat="office">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Office Furniture"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Office</div>
+          <h3>Office Furniture</h3>
+          <p>Work desks, reception counters, conference tables, storage cabinets — custom-built for offices and clinics.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 11 · Shoe Rack -->
+      <div class="card reveal" data-delay="0" data-cat="storage">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Shoe Rack"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Storage</div>
+          <h3>Shoe Racks</h3>
+          <p>Closed-door shoe cabinets with ventilation, open racks, and pull-out drawers — from 12 to 50+ pair capacity.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 12 · Crockery Unit -->
+      <div class="card reveal" data-delay="60" data-cat="storage">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1596142931163-1d2b0a3f6ce0?auto=format&fit=crop&w=900&q=80" alt="Crockery Unit"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Storage / Dining</div>
+          <h3>Crockery Units</h3>
+          <p>Display your crockery with style — glass shutters, LED interiors, and solid lower cabinets for extra storage.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 13 · Pooja Mandir -->
+      <div class="card reveal" data-delay="120" data-cat="storage">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?auto=format&fit=crop&w=900&q=80" alt="Pooja Mandir"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#d4c5b0,#e8ddd0)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Devotional</div>
+          <h3>Pooja Mandir</h3>
+          <p>Custom teak or MDF mandirs with carving, brass fittings, LED halo, and space-saving wall-mount designs.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 14 · False Ceiling -->
+      <div class="card reveal" data-delay="0" data-cat="interior">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=900&q=80" alt="False Ceiling"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Interiors</div>
+          <h3>False Ceiling</h3>
+          <p>Gypsum, POP and PVC false ceilings with cove lighting, spot downlights, and hidden AC duct provisions.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 15 · Wall Panelling -->
+      <div class="card reveal" data-delay="60" data-cat="interior">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="Wall Panelling"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Interiors</div>
+          <h3>Wall Panelling</h3>
+          <p>Fluted panels, geometric patterns, PU leather, and laminate wall panels that elevate any room instantly.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+      <!-- 16 · Repair & Polishing -->
+      <div class="card reveal" data-delay="120" data-cat="interior">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80" alt="Repair & Polishing"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ebe3d5,#c9bba8)'"/>
+        </div>
+        <div class="card-body">
+          <div class="tag-line">Service</div>
+          <h3>Repair & Polishing</h3>
+          <p>Give old furniture a new life. Wood polishing, laminate replacement, hinge repair, and complete refurbishment.</p>
+          <a href="contact.html" class="card-cta">Get Quote →</a>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+
+    <!-- CTA at bottom of grid -->
+    <div style="text-align:center;padding:60px 0 20px" class="reveal">
+      <p style="color:var(--text-soft);font-size:17px;font-weight:300;margin-bottom:22px">Don't see what you need? We build custom pieces too — just ask.</p>
+      <a href="https://wa.me/919044209285?text=Hi%2C%20I%20need%20a%20custom%20furniture%20quote." class="btn btn-brass">
+        <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">Art of Wood</div>
+        <span class="tag">Furniture & Interiors</span>
+        <p>Premium custom furniture and home interior solutions crafted for families across Mira Bhayandar, Mumbai.</p>
+        <div class="socials">
+          <a href="https://wa.me/919044209285" aria-label="WhatsApp">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener" aria-label="Google Maps">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+          <a href="tel:+919044209285" aria-label="Call">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Get Free Quote</a>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="products.html">Sofas & Seating</a>
+        <a href="products.html">Wardrobes</a>
+        <a href="products.html">Modular Kitchen</a>
+        <a href="products.html">Beds & Bedroom</a>
+        <a href="products.html">False Ceiling</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:+919044209285">+91 90442 09285</a>
+        <a href="https://wa.me/919044209285">WhatsApp Chat</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener">Shop 6, Indralok Complex,<br/>Bhayandar, MH 401105</a>
+        <a href="contact.html">Open Daily · Closes 11 PM</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 Art of Wood. All rights reserved.</span>
+      <span>Mira Bhayandar, Maharashtra</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919044209285?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20furniture." class="wa-float" aria-label="Chat on WhatsApp">
+  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+</a>
+
+<script src="main.js"></script>
+<script>
+/* ── Product filter ── */
+(function() {
+  const grid    = document.getElementById('productsGrid');
+  const bar     = document.getElementById('filterBar');
+  const cards   = grid.querySelectorAll('.card[data-cat]');
+  const countEl = document.getElementById('countAll');
+  countEl.textContent = '(' + cards.length + ')';
+
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    bar.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    let shown = 0;
+    cards.forEach(c => {
+      const match = filter === 'all' || c.dataset.cat === filter;
+      c.classList.toggle('hidden', !match);
+      if (match) shown++;
+    });
+  });
+})();
+</script>
+</body>
+</html>

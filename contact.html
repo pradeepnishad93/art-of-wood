@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Art of Wood | Mira Bhayandar, Mumbai</title>
+  <meta name="description" content="Get a free furniture quote from Art of Wood in Mira Bhayandar. Call or WhatsApp +91 90442 09285. Shop 6, Indralok Complex, Bhayandar."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .contact-sec { background: var(--paper); padding: 80px 0; }
+    .map-frame {
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--chalk-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .map-frame iframe {
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .hour-row {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 14px;
+      background: var(--chalk);
+      border-radius: 9px;
+    }
+    .hour-row .day { color: var(--text-soft); }
+    .hour-row .time { font-weight: 600; color: var(--ink); }
+    .hour-row.today { background: var(--chalk-2); border: 1px solid rgba(169,119,47,.3); }
+    @media(max-width:760px) {
+      .hours-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY HEADER / NAV
+============================================================ -->
+<header id="header">
+  <div class="wrap">
+    <nav class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="txt">
+          <span class="name">Art of Wood</span>
+          <span class="tag">Furniture & Interiors</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="btn btn-brass btn-sm">Get a Free Quote</a>
+      <button class="hamburger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<nav class="drawer" id="drawer">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-brass">Get a Free Quote</a>
+</nav>
+
+<!-- ============================================================
+     PAGE HERO
+============================================================ -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow light">Let's Talk</div>
+    <h1>Get Your Free<br/>Estimate Today</h1>
+    <p>Fill the form or WhatsApp us — we'll visit your home, take measurements, and give you a transparent quote with no obligation.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section class="contact-sec">
+  <div class="wrap">
+    <div class="contact-layout">
+
+      <!-- Left: Contact Info -->
+      <div class="contact-info reveal">
+        <div class="eyebrow">Reach Us</div>
+        <h2>Talk to Us<br/>Anytime</h2>
+        <p class="intro">We're available daily till 11 PM. WhatsApp is the fastest way to reach us.</p>
+
+        <!-- Phone -->
+        <div class="info-row">
+          <div class="ic">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="lbl">Phone & WhatsApp</div>
+            <a href="tel:+919044209285" class="val">+91 90442 09285</a>
+          </div>
+        </div>
+
+        <!-- WhatsApp button -->
+        <div style="margin:6px 0 6px 64px">
+          <a href="https://wa.me/919044209285?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20furniture." class="btn btn-brass btn-sm">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+            Start WhatsApp Chat
+          </a>
+        </div>
+
+        <!-- Address -->
+        <div class="info-row">
+          <div class="ic">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="lbl">Shop Address</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener" class="val">
+              Shop No. 6, Indralok Complex,<br/>New Pratiksha, Anand Nagar,<br/>Bhayandar, Mira Bhayandar — 401105
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="info-row">
+          <div class="ic">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <div style="width:100%">
+            <div class="lbl">Working Hours</div>
+            <div class="val" style="font-size:14px;margin-top:6px">Open Daily · Closes 11:00 PM</div>
+            <div class="hours-grid" style="margin-top:10px">
+              <div class="hour-row today"><span class="day">Mon – Fri</span><span class="time">9 AM – 11 PM</span></div>
+              <div class="hour-row today"><span class="day">Sat – Sun</span><span class="time">9 AM – 11 PM</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map link -->
+        <div style="margin-top:18px">
+          <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="form-card reveal" data-delay="120">
+        <h3>Free Quote Request</h3>
+        <p class="sub">Fill in your details and we'll call you within a few hours.</p>
+
+        <!-- Success message (hidden by default) -->
+        <div class="form-success" id="formSuccess">
+          <div class="check-ic">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <polyline points="20,6 9,17 4,12"/>
+            </svg>
+          </div>
+          <h3>Request Sent!</h3>
+          <p>Thank you! We'll call you back within a few hours to discuss your requirements and arrange a home visit.</p>
+          <a href="https://wa.me/919044209285?text=Hi%2C%20I%20just%20submitted%20the%20quote%20form." class="btn btn-brass" style="margin-top:18px">
+            Also Message Us on WhatsApp
+          </a>
+        </div>
+
+        <!-- Form -->
+        <form id="quoteForm" novalidate>
+          <div class="field two">
+            <div class="field" id="fieldName">
+              <label for="fname">Full Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Ramesh Patil" autocomplete="name"/>
+              <div class="field-err">Please enter your name.</div>
+            </div>
+            <div class="field" id="fieldPhone">
+              <label for="fphone">Phone / WhatsApp *</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+91 98765 43210" autocomplete="tel"/>
+              <div class="field-err">Enter a valid 10-digit number.</div>
+            </div>
+          </div>
+          <div class="field" id="fieldArea">
+            <label for="farea">Your Area / Location *</label>
+            <input type="text" id="farea" name="area" placeholder="e.g. Bhayandar West, Mira Road, Naigaon…"/>
+            <div class="field-err">Please enter your area.</div>
+          </div>
+          <div class="field" id="fieldService">
+            <label for="fservice">Service Interested In *</label>
+            <select id="fservice" name="service">
+              <option value="">— Select a service —</option>
+              <option>Sofa / Seating</option>
+              <option>TV Unit / Media Wall</option>
+              <option>Wardrobe (Sliding)</option>
+              <option>Wardrobe (Openable)</option>
+              <option>Bed / Bedroom Set</option>
+              <option>Modular Kitchen</option>
+              <option>Dining Table</option>
+              <option>Study Table</option>
+              <option>False Ceiling</option>
+              <option>Wall Panelling</option>
+              <option>Shoe Rack / Storage</option>
+              <option>Pooja Mandir</option>
+              <option>Office Furniture</option>
+              <option>Crockery Unit</option>
+              <option>Repair & Polishing</option>
+              <option>Full Home Interiors</option>
+              <option>Other / Multiple Items</option>
+            </select>
+            <div class="field-err">Please select a service.</div>
+          </div>
+          <div class="field">
+            <label for="fmsg">Message (optional)</label>
+            <textarea id="fmsg" name="message" placeholder="Room dimensions, any specific requirements, budget range…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-brass" style="width:100%;justify-content:center;margin-top:6px">
+            Send My Quote Request
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+          </button>
+          <p style="text-align:center;font-size:12px;color:var(--text-soft);margin-top:14px;font-weight:300">
+            We never share your details. Expect a call within a few hours.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-frame reveal" style="margin-top:64px">
+      <iframe
+        src="https://maps.google.com/maps?q=Indralok+Complex+Bhayandar+Mira+Bhayandar+Maharashtra&output=embed&z=16"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Art of Wood Location"
+        onerror="this.style.display='none'"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">Art of Wood</div>
+        <span class="tag">Furniture & Interiors</span>
+        <p>Premium custom furniture and home interior solutions crafted for families across Mira Bhayandar, Mumbai.</p>
+        <div class="socials">
+          <a href="https://wa.me/919044209285" aria-label="WhatsApp">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener" aria-label="Google Maps">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+          <a href="tel:+919044209285" aria-label="Call">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Get Free Quote</a>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="products.html">Sofas & Seating</a>
+        <a href="products.html">Wardrobes</a>
+        <a href="products.html">Modular Kitchen</a>
+        <a href="products.html">Beds & Bedroom</a>
+        <a href="products.html">False Ceiling</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:+919044209285">+91 90442 09285</a>
+        <a href="https://wa.me/919044209285">WhatsApp Chat</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=8V38%2B93%20Mira%20Bhayandar" target="_blank" rel="noopener">Shop 6, Indralok Complex,<br/>Bhayandar, MH 401105</a>
+        <a href="contact.html">Open Daily · Closes 11 PM</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 Art of Wood. All rights reserved.</span>
+      <span>Mira Bhayandar, Maharashtra</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919044209285?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20furniture." class="wa-float" aria-label="Chat on WhatsApp">
+  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05.5C5.7.5.5 5.7.5 12.05c0 2.139.553 4.154 1.525 5.906L.5 23.5l5.687-1.5A11.504 11.504 0 0012.05 23.5C18.4 23.5 23.5 18.3 23.5 11.95 23.5 5.7 18.4.5 12.05.5z"/></svg>
+</a>
+
+<script src="main.js"></script>
+<script>
+/* ── Contact form validation ── */
+(function() {
+  const form    = document.getElementById('quoteForm');
+  const success = document.getElementById('formSuccess');
+
+  function validateField(id, testFn) {
+    const el = document.getElementById(id);
+    const wrap = el.closest('.field');
+    const ok = testFn(el.value.trim());
+    wrap.classList.toggle('invalid', !ok);
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const n  = validateField('fname',    v => v.length >= 2);
+    const p  = validateField('fphone',   v => /^[0-9+\s\-]{10,14}$/.test(v));
+    const a  = validateField('farea',    v => v.length >= 2);
+    const s  = validateField('fservice', v => v !== '');
+    if (n && p && a && s) {
+      form.style.display = 'none';
+      success.classList.add('show');
+    }
+  });
+
+  /* Clear invalid on input */
+  ['fname','fphone','farea','fservice'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('input', () => el.closest('.field').classList.remove('invalid'));
+  });
+})();
+</script>
+</body>
+</html>
